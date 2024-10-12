@@ -21,8 +21,8 @@ const Vuetify = createVuetify({
     defaultSet: 'mdi',
     aliases,
     sets: { mdi },
-  }
-})
+  },
+});
 
 createApp(App)
   .use(Vuetify)

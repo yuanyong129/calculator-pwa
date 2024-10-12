@@ -38,14 +38,14 @@ const onMenuClick = (key: string, _title: string) => {
 
 <template>
   <v-layout>
-    <v-app-bar color="default">
+    <v-app-bar color="amber-lighten-4">
       <v-app-bar-nav-icon variant="text" @click.stop="openDrawer"></v-app-bar-nav-icon>
       <v-toolbar-title>{{ title }}</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer
       v-model="visible"
-      :location="$vuetify.display.mobile ? 'bottom' : undefined"
+      color="amber-lighten-4"
       temporary>
       
       <v-list>
@@ -76,7 +76,7 @@ const onMenuClick = (key: string, _title: string) => {
       </template>
     </v-navigation-drawer>
 
-    <v-main style="height: 100vh;">
+    <v-main :style="`height: 100vh`" color="amber-lighten-4">
       <router-view></router-view>
     </v-main>
   </v-layout>

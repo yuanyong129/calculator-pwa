@@ -8,12 +8,12 @@ import { MATH_SYMBOL } from '@/utils/constant';
 const expression = ref<string>('');
 const result = ref<string>('0');
 
-let isFinished: boolean = false;
+// let isFinished: boolean = false;
 
 const calc = () => {
   expression.value += result.value;
   result.value = calcExpression(expression.value);
-  isFinished = true;
+  // isFinished = true;
 }
 
 const calcExpression = (expression: string) => {
@@ -91,7 +91,8 @@ const onClick = (val: string) => {
       result.value = FMath.negate(result.value).toString();
       break;
     default:
-      result.value += val;
+      if(result.value !== '0') result.value += val;
+      else result.value = val;
       break;
   }
 }
@@ -113,5 +114,6 @@ const onClick = (val: string) => {
   display: grid;
   grid-template-rows: 1fr 6fr;
   gap: 20px;
+  background-color: transparent;
 }
 </style>
