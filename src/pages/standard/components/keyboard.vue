@@ -48,7 +48,6 @@ const onClick = (val: string | number) => {
 <template>
   <div class="keyboard-container">
     <v-card 
-      color="amber-lighten-4"
       class="key-button"
       v-for="item in buttonList"
       :key="item.value"
